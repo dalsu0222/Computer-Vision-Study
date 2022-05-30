@@ -115,3 +115,8 @@ per-pixel weights(중앙으로부터 거리에 따라 값이 다른 filter, 즉 
 말 그대로 중간값을 사용하는 필터이다.   
 output들의 값들을 정렬해서 중간값을 선택한다면 큰 값이 선택되지 않을 것이다.   
 <img width="316" alt="image" src="https://user-images.githubusercontent.com/97183032/170999368-d862a48d-e341-47ff-b94a-bfc5fa2123cd.png">   
+<br/><br/>
+## 실습
+* [average filtering 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/average_filtering.ipynb)
+* [image sharpening 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/image_sharpening.ipynb)
+* [Gaussian filter & Median filter 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/Gaussian_filter%26Median_filter.ipynb)
