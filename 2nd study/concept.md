@@ -50,8 +50,8 @@ Depth of Field는 '초점이 맞는 범위'를 의미한다. (사진상에서 �
 ## Field of View(FoV)
 Field of View(FoV)는 '카메라가 담을 수 있는 각도(화각)'을 의미한다.   
 <img width="272" alt="image" src="https://user-images.githubusercontent.com/97183032/170956126-29c763f4-3b46-4b52-adeb-38d41eff3514.png">   
-FoV를 크게하려면, 즉 카메라가 더 넓은 각도를 담으려면 f 증가 or d 감소 시킨다.  
-그러나 현실적으로 d 조절은 힘드므로 <strong>f 를 증가시켜서 카메라가 더 넓은 각도를 담을 수 있게한다.</strong> 이 방식은 카메라의 줌(zoom)을 조절하는 방식에 사용된다.   
+FoV를 크게하려면, 즉 카메라가 더 넓은 각도를 담으려면 f 감소 or d 증가 시킨다.  
+그러나 현실적으로 d 조절은 힘드므로 <strong>f 를 감소시켜서 카메라가 더 넓은 각도를 담을 수 있게한다.</strong> 이 방식은 카메라의 줌(zoom)을 조절하는 방식에 사용된다.   
 ## Color image
 컬러 영상은 R,G,B 3가지 색상정보를 모두 담기 위한 R,G,B 3개의 channel로 이루어진다.   
 비용적인 문제로 인해 비싼카메라가 아니라면 보통 color filter를 1개만 사용한다.   
@@ -60,7 +60,7 @@ FoV를 크게하려면, 즉 카메라가 더 넓은 각도를 담으려면 f 증
 픽셀마다 특정 색만 통과가능한 filter를 적용해서 색이 없는 부분들은 주변 색들의 평균값으로 interpolation(보간)해서 채워준다.   
 <br/><br/>
 ## Image filtering
-영상에는 여러 noise type이 있다.(noise : 사진을 봤을 때 기분나쁜 느낌)   
+영상에는 여러 noise type이 있다. (noise : 원본영상보다 흐릿하게 보이거나, 점들이 있는 부분)   
 <img width="194" alt="image" src="https://user-images.githubusercontent.com/97183032/170958967-63400ec3-5ed3-4a52-9e49-fa4b425d28c1.png">   
 * salt and pepper noise : 검은점과 흰점
 * impulse noise : 갑자기 튀는 흰색 점
@@ -69,7 +69,7 @@ FoV를 크게하려면, 즉 카메라가 더 넓은 각도를 담으려면 f 증
 <strong>영상의 noise들을 제거하기 위해 weight average</strong>(가중치를 곱하는 것)을 이용한다. (weight들은 filter(kernel)이라고도 한다.)   
 input영상에 대해 Filter를 한칸씩 이동하면서 각 성분과 곱한 합을 계산하고, 이 값을 해당 filter의 가운데 위치(index)의 값으로 저장된다.   
 * 1차원일 때   <br/><img width="218" alt="image" src="https://user-images.githubusercontent.com/97183032/170959808-0a431a77-350d-4b90-b83e-7a7afc40ab28.png">  
-* 2차원일 때   <br/><img width="283" alt="image" src="https://user-images.githubusercontent.com/97183032/170959923-eea886b8-c2da-469c-bb2a-8c03be7ecd1e.png">
+* 2차원일 때   <br/><img width="283" alt="image" src="https://user-images.githubusercontent.com/97183032/170959923-eea886b8-c2da-469c-bb2a-8c03be7ecd1e.png"><br/>
 2차원일 때도 1차원과 비슷한 원리로 2차원의 필터를 이용하여 2차원의 output을 얻어낸다.   
 이런 계산과정을 <strong>convolution</strong>이라고 한다.
 ### convolution 연산 성질
