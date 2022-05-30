@@ -100,3 +100,18 @@ full이나 same에서 출력영상이 입력영상보다 크거나 같은 크기
 <img width="358" alt="image" src="https://user-images.githubusercontent.com/97183032/170964796-e68333cc-dae5-4f3b-8383-884b4b69efe2.png">   
 이때 원본 영상에 detail한 부분의 가중치를 부여해서 더해주면 더 sharp(또렷)한 영상을 얻을 수 있다. 그리고 가중치를 더 많이 부여할수록 더욱 sharp해진다.   
 <img width="281" alt="image" src="https://user-images.githubusercontent.com/97183032/170965207-d0109457-22c5-498d-a5bc-de069e6d5c9f.png">   
+<br/><br/>
+
+## Box smoothing
+영상이 모자이크된 것 처럼 박스모양으로 보일때, box smoothing을 통해 해결가능하다.   
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/97183032/170998020-8241039e-a50b-48a0-9b38-b36bf2846b13.png">   
+per-pixel weights(중앙으로부터 거리에 따라 값이 다른 filter, 즉 gaussian filter)을 적용하여 해결한다.   
+필터의 시그마(분산)을 조정하여 필터의 크기 조절 가능하며, 보통 필터크기의 1/6정도로 시그마를 설정한다.   
+<img width="358" alt="image" src="https://user-images.githubusercontent.com/97183032/170998708-de4cbe94-f948-4e81-94c5-ed55bd88cac6.png">   
+그런데 모자이크 noise말고 흰 색점들이 있는 noise에서는, 큰 값의 noise가 존재하기 때문에 gaussian filter를 적용해도 여전히 큰 값을 가진다.   
+이 문제를 해결하기 위해 median filter를 사용한다.
+<br/><br/>
+## Median filter
+말 그대로 중간값을 사용하는 필터이다.   
+output들의 값들을 정렬해서 중간값을 선택한다면 큰 값이 선택되지 않을 것이다.   
+<img width="316" alt="image" src="https://user-images.githubusercontent.com/97183032/170999368-d862a48d-e341-47ff-b94a-bfc5fa2123cd.png">   
