@@ -120,3 +120,4 @@ output들의 값들을 정렬해서 중간값을 선택한다면 큰 값이 선�
 * [average filtering 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/average_filtering.ipynb)
 * [image sharpening 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/image_sharpening.ipynb)
 * [Gaussian filter & Median filter 실습](https://github.com/dalsu0222/Computer-Vision-Study/blob/main/2nd%20study/Gaussian_filter%26Median_filter.ipynb)
+* [사진으로 실습해보기](https://github.com/joomj2000/Computer-Vision/blob/main/study_2/%EC%82%AC%EC%A7%84%EC%9C%BC%EB%A1%9C_%EC%8B%A4%EC%8A%B5%ED%95%B4%EB%B3%B4%EA%B8%B0.ipynb)
