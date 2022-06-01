@@ -39,7 +39,7 @@ Lens는 film에 빛을 모아주는 역할을 한다.
 하지만 D와 f를 조절하는 것은 현실적으로 쉽지 않기 때문에 보통  <strong>D’(lens와 image plane 사이의 거리)를 조정해서</strong> in-focus 상태로 맞추게 된다.
 <br/><br/>
 ## Depth of Field(DoF)
-Depth of Field는 '초점이 맞는 범위'를 의미한다. (사진상에서 초점이 맞아서 선명하게 보이는 범위)    
+Depth of Field는 '초점이 맞는 범위'를 의미한다. (사진상에서 초점이 맞아서 선명하게 보이는 범위) 피사체의 위치가 best focus로부터 가까워지거나 멀어질 때 refocusing 없이 원하는 이미지 품질을 유지할 때 쓰인다.<br/>
 <strong>aperture size(조리개 크기)를 조절</strong>해서 조정할 수 있다.   
 <img width="309" alt="image" src="https://user-images.githubusercontent.com/97183032/170955454-37894cd9-de9b-45d7-ba99-ea7e92710d99.png">   
 * 작은 aperture size를 가진다면   
